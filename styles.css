@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #212121;
+    padding: 2rem;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.presentacion h1,
+.presentacion h2 {
+    color: #212121;
+    margin: 0.5rem 0;
+}
+
+.presentacion h2 {
+    font-size: 0.95rem;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para móviles */
+    justify-content: center; 
+    align-items: center; /* Centrado verticalmente */
+    width: 100%;
+    max-width: 1000px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #383838;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Margen inferior para separación en móviles */
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Ajustado para móviles */
+    height: 120px; /* Ajustado para móviles */
+    background-color: #424242;
+    color: #fff;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0.5rem; /* Margen más pequeño */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item:hover {
+    background-color: #616161;
+}
+
+.selection-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.instructions {
+    font-size: 0.9rem; /* Tamaño de fuente ajustado */
+    margin-top: 1rem; /* Menos espacio arriba */
+    color: #bdbdbd;
+    text-align: center;
+}
+
+/* Clase base para alertas */
+.alerta {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Estados de alerta */
+.alerta-victoria { background-color: #4caf50; }
+.alerta-empate { background-color: #ffc107; }
+.alerta-derrota { background-color: #f44336; }
+
+/* Colores para la selección del jugador y del bot */
+.seleccionado { background-color: #90caf9; }
+.seleccionado-bot { background-color: #ffab40; }
+
+.jugador {
+    color: #90caf9;
+    font-weight: bold;
+}
+
+.bot {
+    color: #ffab40;
+    font-weight: bold;
+}
+
+/* Estilos para el tablero de resultados */
+.resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 350px; 
+    margin-top: 1rem; /* Espacio superior en móviles */
+}
+
+.resultado-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.resultado-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#conteo {
+    font-size: 1.2rem;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .contenido {
+        flex-direction: column; /* Mantener la dirección en columna */
+        align-items: center; /* Centrar el contenido */
+    }
+
+    .item-container {
+        flex-direction: row; /* Permitir fila en dispositivos más anchos */
+        justify-content: center; /* Centrar los elementos */
+    }
+
+    .item {
+        width: 100px; /* Ajuste aún más para móviles */
+        height: 100px; /* Ajuste aún más para móviles */
+        font-size: 0.9rem; /* Tamaño de fuente reducido para móviles */
+    }
+
+    .selection-text {
+        font-size: 1.25rem; /* Ajuste en tamaño */
+    }
+
+    .instructions {
+        font-size: 0.8rem; /* Tamaño de fuente reducido */
+        margin-top: 0.5rem; /* Menos espacio */
+    }
+}

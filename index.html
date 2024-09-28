@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu archivo CSS -->
+</head>
+
+<body>
+    <!-- SECCION: PRESENTACION -->
+    <section class="presentacion">
+        <h1>Piedra, Papel o Tijeras</h1>
+        <h2>Hecho por: Maria Jose Gonzalez Cerda</h2>
+    </section>
+
+    <div class="contenido">
+        <!-- SECCION: JUEGO -->
+        <section class="principal">
+            <div class="selection-text">Haz tu elección:</div>
+
+            <div class="item-container">
+                <div class="item" id="tijeras">TIJERAS</div>
+                <div class="item" id="piedra">PIEDRA</div>
+                <div class="item" id="papel">PAPEL</div>
+            </div>
+
+            <div class="instructions">
+                Presiona <strong>P</strong> para PAPEL, <strong>R</strong> para PIEDRA, <strong>T</strong> para TIJERAS
+            </div>
+        </section>
+
+        <!-- SECCION RESULTADOS -->
+        <div class="resultados">
+            <div class="resultado-item jugador" id="jugador">
+                Jugador: <span id="eleccion-jugador">Ninguna</span>
+            </div>
+            <div class="resultado-item bot" id="bot">
+                Bot: <span id="eleccion-bot">Ninguna</span>
+            </div>
+            <div class="resultado-item" id="conteo">
+                Victorias: <span id="victorias">0</span> | Derrotas: <span id="derrotas">0</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
